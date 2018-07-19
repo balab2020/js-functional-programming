@@ -60,7 +60,7 @@ Add (a,b) {
     const powOfNums = [];
     numbers.forEach( i => powOfNums.push(Math.pow(i,i) );
     console.log(powOfNums);
-    ```
+   ```
     
   - map
   ```js
