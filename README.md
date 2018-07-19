@@ -1,4 +1,4 @@
-# JavaScript-Functional Programming
+# JavaScript Functional Programming
 
 ##### Pure Functions
 A function can be called with the same inputs at anytime, you should get the same result always.
