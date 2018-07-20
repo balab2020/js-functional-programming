@@ -1,14 +1,18 @@
 # JavaScript Functional Programming
 
 ## Functional Programming
-It is pattern followed in programming.It helps to follow avoid mutation of object / value and write pure functions.
+It is pattern followed in programming.It helps to avoid mutation of object / value and write pure functions.
 
-
+Lets start understanding below concepts in detail:
 - Higher order functions
 - Pure Functions
 - Immutation
 
 ##### Higher order functions
+It is function which takes one or more functions as arguments and returns function which process inputs.
+
+For example:
+if you want to calculate the power of 2 for given input x.
 
 ##### Pure Functions
 A function can be called with the same inputs at anytime, you should get the same result always.
