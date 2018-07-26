@@ -1,10 +1,19 @@
-# JavaScript Functional Programming
+# JavaScript Functional Programming - In complete
 
 ## Functional Programming
-It is pattern followed in programming.It helps to avoid mutation of object / value and write pure functions.
+You can find a lot of articles, blogs & finally [wikipedia](https://en.wikipedia.org/wiki/Functional_programming) to understand about this. According to me, functional programming is programming pattern followed with certain practices.
 
-Lets start understanding below concepts in detail:
-- Higher order functions
+> Building collection of functional blocks to process something without changing the state & with purity.
+
+Simple understanding from mathematics:
+
+> f(x,y) = x + y, f1(x,y,z) = f(x, f(y,z)) => x + y + z
+
+f(x,y) takes two arguments and returns some. It is pure function whick takes 2 arguments & returns the sum.
+
+
+You come around lot terminologies in this programming paradigm. Like below,
+- Higher order or First classfunctions
 - Pure Functions
 - Immutation
 
