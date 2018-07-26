@@ -50,3 +50,73 @@ If you remove function from the system, the side effect is zero except it's proc
  
  ## Functional programming with JavaScript
   
+Javascript is well known interpreted programming language and changed the software industry lot in 2018. Everything is a function in javascript. It has new API methods to support functional programming. 
+
+Before starting functional programming with javascript. Lets get started with new stuff
+
+- reduce
+- map
+- filter
+- every
+- some
+- etc..
+
+Best site to learn these all is [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
+
+Think we have dataset before starting the simple problem.
+
+#### Practial
+
+```javascript
+const numbers = [12,14,23,40,6,78,90,100,123];
+```
+
+##### Problem statements:
+
+1. find maximum in number?
+1. find sum of numbers?
+1. get odd numbers?
+1. get sqrt of each from number?
+
+```javascript
+   //find maximum in number?
+   function max(input){
+        var max = input[0];
+        for(var i = 1 ; i < input.length ; i++)
+        {
+            if(input[i] > max)
+            {
+              max = input[i];
+            }
+        }
+      return max;
+   }
+   //find sum of numbers?
+   function sum(input){
+      var sum = 0;
+      for(i=0;i<input.length;i++)
+        sum += input[i];
+      return sum;
+   }
+   //get odd numbers?
+   function getOdds(input){
+     var odds = [];
+     for(i=0; i<input.length;i++) {
+        if(input[i] % 2 === 1)
+            odds.push( input[i] );
+     }
+   }  
+   //get sqrt of each from number?
+   function sqrt(input) {
+      var sqrts = [];
+      for(i=0; i<input;i++)
+         sqrts.push(Math.sqrt(input[i]));
+      return sqrts;
+   }
+```
+
+If you solved all problem statement with given dataset, you may be arrived at the proposed solution.
+
+if yes, it is good to see  you are logically solving the problem.
+
+Lets think differently :)
