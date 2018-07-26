@@ -105,6 +105,7 @@ const numbers = [12,14,23,40,6,78,90,100,123];
         if(input[i] % 2 === 1)
             odds.push( input[i] );
      }
+     return odds;
    }  
    //get sqrt of each from number?
    function sqrt(input) {
