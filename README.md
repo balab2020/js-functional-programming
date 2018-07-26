@@ -1,7 +1,7 @@
 # JavaScript Functional Programming - In complete
 
 ## Functional Programming
-You can find a lot of articles, blogs & finally [wikipedia](https://en.wikipedia.org/wiki/Functional_programming) to understand about this. According to me, functional programming is programming pattern followed with certain practices. It is a [declarative programming ] (https://en.wikipedia.org/wiki/Declarative_programming) paradigm.
+You can find a lot of articles, blogs & finally [wikipedia](https://en.wikipedia.org/wiki/Functional_programming) to understand about this. According to me, functional programming is programming pattern followed with certain practices. It is a [declarative programming]  (https://en.wikipedia.org/wiki/Declarative_programming) paradigm. 
 
 > Collection of simple functional blocks to build application with immutation, purity.
 
