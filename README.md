@@ -108,6 +108,10 @@ function max(numbers){
 ```
 In this solution, we just replaced for loop with forEach which takes function as argument and uses it to process each item in array.
 
+Improvements:
+- we don't introduce & maintain variable like i
+- we use callback function to process the array
+
 _Solution 3_: Use Array.prototype.reduce, if you want to learn about reduce, please read in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ```javascript
@@ -117,5 +121,10 @@ console.log(numbers.reduce(reducer));
 In this soultion, we have removed for or forEach loop, reduce takes callback function and does recursion operation. reducer is a callback function which is invoked with two arguments, first argument is result of previous call, second argument is the current position value.
 
 i.e) max is tha accumulator, numbers[i] is the currentValue from previous examples.
+
+Improvements:
+- don't need to have any global/local variables
+- result derieved from function callbacks in recursion way.
+- reducer becomes pure function & reusable
 
 This is then way, you start thinking in functional programming way by removing avoidable variables, logic. 
