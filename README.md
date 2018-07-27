@@ -54,24 +54,20 @@ Javascript is well known interpreted programming language and changed the softwa
 
 Before starting functional programming with javascript. Lets get familiarize with new API methods in javascript.
 
-Array.prototype methods, refer for more in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype).
-
+Array.prototype methods
 - reduce
 - map
 - filter
 - every
 - some
-- etc..
+- etc.. refer for more in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype).
 
-Best site to learn these all is [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype)
-
-Think we have dataset before starting the simple problem.
 
 #### Practial
 
 Lets get start with simple problem, processing numbers in array.
 
-Assume the below array to solve all problems.
+Given below numbers array, we will solve different problems gradually
 
 ```javascript
 const numbers = [12,14,23,40,6,78,90,100,123];
@@ -79,14 +75,7 @@ const numbers = [12,14,23,40,6,78,90,100,123];
 
 ##### Problem statements:
 
-1. Find maximum in numbers array?
-1. Find sum of numbers?
-1. Get all odd numbers?
-1. Get sqrt of each from number from numbers array?
-
-We will solve the problems in different ways gradually.
-
-###### Find maximum in numbers array
+###### 1.Find maximum in numbers array
 
 _Solution 1_: Create a function which takes numbers array as argument and iterates it to find the maximum number in the array.
 
