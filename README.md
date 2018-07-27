@@ -127,4 +127,4 @@ Improvements:
 - result derieved from function callbacks in recursion way.
 - reducer becomes pure function & reusable
 
-This is then way, you start thinking in functional programming way by removing avoidable variables, logic. 
+This is the way you start thinking in functional programming way. Functions are used to derived output from inputs. 
