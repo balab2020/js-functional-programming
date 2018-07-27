@@ -48,11 +48,9 @@ If you remove function from the system, the side effect is zero except it's proc
   
   - [x] I am done with theoary, lets talk about real time examples.
  
- ## Functional programming with JavaScript
+ ## Process collection in JS : Advanced JS programming 
   
-Javascript is well known interpreted programming language and changed the software industry lot in 2018. Everything is a function in javascript. It has new API methods which extends jsvascript to support functional programming. 
-
-Before starting functional programming with javascript. Lets get familiarize with new API methods in javascript.
+Javascript supports new prototype methods with Array which helps to implement functional programming without using any frameworks. We will understand few them here before starting with functional programming with javscript.
 
 Array.prototype methods
 - reduce
@@ -62,20 +60,18 @@ Array.prototype methods
 - some
 - etc.. refer for more in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype).
 
+We can learn more theory from internet. Let start solving simple problems using them.
 
-#### Practial
+### Hands on / Practical
 
-Lets get start with simple problem, processing numbers in array.
+#### Problem: Process array of number.
 
-Given below numbers array, we will solve different problems gradually
-
+Lets assume below is dataset/input to the problem.
 ```javascript
 const numbers = [12,14,23,40,6,78,90,100,123];
 ```
 
-##### Problem statements:
-
-###### Find maximum in numbers array
+###### Find max number from given array
 
 _Solution 1_: Create a function which takes numbers array as argument and iterates it to find the maximum number in the array.
 
@@ -129,7 +125,7 @@ Improvements:
 
 This is the way you start thinking in functional programming way. Functions are used to derived output from inputs. 
 
-###### Find sum of all from numbers array
+###### Find sum of all numbers from given array
 
 We can solve this problem with for loop, Array.prototype.forEach. I would rather show you the solution directly using reduce.
 
@@ -142,7 +138,7 @@ const sum = numbers.reduce(add,0);
 - Add is simple function just return sum of 2 input numbers as arguments.
 - Second argument 0 is initial seed to process first time.
 
-###### Filter all odd numbers from numbers array
+###### Filter all odd numbers from given numbers array
 
 _Solution 1_: Use forEach to filter odd numbers.
 ```javascript
@@ -162,7 +158,7 @@ const odds = numbers.filter(isOdd);
 ```
 filter API helps to filter item from array which satisfies the given condition. filter takes callback function and return result array.
 
-###### Calculate sqrt of all the numbers
+###### Get square root of all the numbers from given input array
 
 _Solution 1_: Use forEach to filter odd numbers.
 ```javascript
