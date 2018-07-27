@@ -141,3 +141,41 @@ const sum = numbers.reduce(add,0);
 ```
 - Add is simple function just return sum of 2 input numbers as arguments.
 - Second argument 0 is initial seed to process first time.
+
+###### Filter all odd numbers from numbers array
+
+_Solution 1_: Use forEach to filter odd numbers.
+```javascript
+const odds = []
+numbers.forEach( function(number) {
+  if(number % 2 == 1)
+    odds.push(number);
+});
+```
+
+_Solution 2_: Use Array.prototype.filter
+```javascript
+const isOdd = function (n){
+  return n % 2 == 1;
+};
+const odds = numbers.filter(isOdd);
+```
+filter API helps to filter item from array which satisfies the given condition. filter takes callback function and return result array.
+
+###### Calculate sqrt of all the numbers
+
+_Solution 1_: Use forEach to filter odd numbers.
+```javascript
+const sqrtNumbers = []
+numbers.forEach(function(number) {
+ sqrtNumbers.push(Math.sqrt(number));
+});
+```
+
+_Solution 2_: Use Array.prototype.map
+```javascript
+const sqrtNumbers = numbers.map(Math.sqrt);
+```
+map creates new array from input array by using given function.
+
+Continue to learn about more in MDN as suggested earlier.
