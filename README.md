@@ -75,7 +75,7 @@ const numbers = [12,14,23,40,6,78,90,100,123];
 
 ##### Problem statements:
 
-###### 1.Find maximum in numbers array
+###### Find maximum in numbers array
 
 _Solution 1_: Create a function which takes numbers array as argument and iterates it to find the maximum number in the array.
 
@@ -128,3 +128,16 @@ Improvements:
 - reducer becomes pure function & reusable
 
 This is the way you start thinking in functional programming way. Functions are used to derived output from inputs. 
+
+###### Find sum of all from numbers array
+
+We can solve this problem with for loop, Array.prototype.forEach. I would rather show you the solution directly using reduce.
+
+```javascript
+const add = function(a,b) {
+  return a + b;
+}
+const sum = numbers.reduce(add,0);
+```
+- Add is simple function just return sum of 2 input numbers as arguments.
+- Second argument 0 is initial seed to process first time.
