@@ -50,9 +50,11 @@ If you remove function from the system, the side effect is zero except it's proc
  
  ## Functional programming with JavaScript
   
-Javascript is well known interpreted programming language and changed the software industry lot in 2018. Everything is a function in javascript. It has new API methods to support functional programming. 
+Javascript is well known interpreted programming language and changed the software industry lot in 2018. Everything is a function in javascript. It has new API methods which extends jsvascript to support functional programming. 
 
-Before starting functional programming with javascript. Lets get started with new stuff
+Before starting functional programming with javascript. Lets get familiarize with new API methods in javascript.
+
+Array.prototype methods, refer for more in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype).
 
 - reduce
 - map
@@ -84,10 +86,9 @@ const numbers = [12,14,23,40,6,78,90,100,123];
 
 We will solve the problems in different ways gradually.
 
-Lets solve one by one.
 ###### Find maximum in numbers array
 
-Solution 1: Create a function which takes numbers array as argument and iterates it to find the maximum number in the array.
+_Solution 1_: Create a function which takes numbers array as argument and iterates it to find the maximum number in the array.
 
 ```javascript   
 function max(numbers){
@@ -103,7 +104,7 @@ function max(numbers){
 ```
 This works really perfect but we have introduced some new variables like max, i and using for loop. All these can be avoided.
 
-Solution 2: Use Array.prototype.forEach to avoid for loop.
+_Solution 2_: Use Array.prototype.forEach to avoid for loop.
 
 ```javascript   
 function max(numbers){
@@ -118,10 +119,14 @@ function max(numbers){
 ```
 In this solution, we just replaced for loop with forEach which takes function as argument and uses it to process each item in array.
 
-Solution 3: Use Array.prototype.reduce, if you want to learn about reduce, please read in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+_Solution 3_: Use Array.prototype.reduce, if you want to learn about reduce, please read in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ```javascript
 const reducer = (max, currentValue) => max < currentValue ? currentValue : max;
 console.log(numbers.reduce(reducer));
 ```
-In this soultion, we have removed all the local scope variable, reducer is a simple function which takes two arguments and returns the maximum out of them.
+In this soultion, we have removed for or forEach loop, reduce takes callback function and does recursion operation. reducer is a callback function which is invoked with two arguments, first argument is result of previous call, second argument is the current position value.
+
+i.e) max is tha accumulator, numbers[i] is the currentValue from previous examples.
+
+This is then way, you start thinking in functional programming way by removing avoidable variables, logic. 
