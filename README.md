@@ -176,6 +176,9 @@ _Solution 2_: Use Array.prototype.map
 ```javascript
 const sqrtNumbers = numbers.map(Math.sqrt);
 ```
-map creates new array from input array by using given function.
+Array.prototype.map creates new array from input array by using given function.
 
-Continue to learn about more in MDN as suggested earlier.
+
+I hope, we got fair understanding with javascript API to process the collection. We should be able to understand when to use map, reduce, filter..etc to keep modules simple.
+
+Let get started thinking make functions to replace operators, comparators..etc
