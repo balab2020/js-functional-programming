@@ -67,6 +67,10 @@ Think we have dataset before starting the simple problem.
 
 #### Practial
 
+Lets get start with simple problem, processing numbers in array.
+
+Assume the below array to solve all problems.
+
 ```javascript
 const numbers = [12,14,23,40,6,78,90,100,123];
 ```
@@ -78,9 +82,12 @@ const numbers = [12,14,23,40,6,78,90,100,123];
 1. Get all odd numbers?
 1. Get sqrt of each from number from numbers array?
 
+We will solve the problems in different ways gradually.
 
 Lets solve one by one.
 ###### Find maximum in numbers array
+
+Solution 1: Create a function which takes numbers array as argument and iterates it to find the maximum number in the array.
 
 ```javascript   
 function max(numbers){
@@ -94,5 +101,27 @@ function max(numbers){
  }   
    console.log(max(numbers));
 ```
+This works really perfect but we have introduced some new variables like max, i and using for loop. All these can be avoided.
 
-  
+Solution 2: Use Array.prototype.forEach to avoid for loop.
+
+```javascript   
+function max(numbers){
+    var max = 0;
+    numbers.forEach(function findMax(number){
+      if(max < number)
+        max = number;
+    });
+    return max;
+ }   
+ console.log(max(numbers));
+```
+In this solution, we just replaced for loop with forEach which takes function as argument and uses it to process each item in array.
+
+Solution 3: Use Array.prototype.reduce, if you want to learn about reduce, please read in [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+```javascript
+const reducer = (max, currentValue) => max < currentValue ? currentValue : max;
+console.log(numbers.reduce(reducer));
+```
+In this soultion, we have removed all the local scope variable, reducer is a simple function which takes two arguments and returns the maximum out of them.
