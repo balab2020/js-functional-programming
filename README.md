@@ -51,7 +51,7 @@ function: ```fn(f,a,b) = function(a,b){
 
 ..etc
 
-Instead of writing logical, we need to just these basic mathematical functions to get out put;
+Instead of writing logical, we need to just use these basic mathematical functions to get output;
 
 For example, If you have two numbers x & y and need to sum them if x greater than y otherwise subtract y from x.
 
