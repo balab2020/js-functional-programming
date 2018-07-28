@@ -2,7 +2,7 @@
 # Functional Programming in JavaScript 
 
 ## Functional Programming
-Functional programming is a [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) paradigm. Everything is trated as function in mathematics way and it does exactly only one action at a time. You can read more about it in [wikipedia](https://en.wikipedia.org/wiki/Functional_programming). It is not new now. It was introduced along with Object Oriented Programming.
+Functional programming is a [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) paradigm. Everything is treated as function in mathematics way and it does exactly only one action at a time. You can read more about it in [wikipedia](https://en.wikipedia.org/wiki/Functional_programming). It is not new now. It was introduced along with Object Oriented Programming.
 
 > Collection of simple functional blocks to build application with immutation, purity.
 
@@ -43,7 +43,7 @@ Not: ```not(x) = !x;```
 
 AND: ```and(x,y) = x && y;```
 
-ifElse: ```ifElse(cond,ifFn, elseFn) = cond ? ifFn() : elseFn();```
+ifElse: ```ifElse(cond,ifAns, elseAns) = cond ? ifAns : elseAns;```
 
 function: ```fn(f,a,b) = function(a,b){
   return f(a,b);
@@ -68,31 +68,23 @@ else
 In functional programming, you need to think of calling functions to do this.
 ```
 const x=1, y=2;
-ifElse(gt(x,y),fn(f,x,y), fn(s,x,y));
+ifElse(gt(x,y),f(x,y), s(x,y));
 ```
 Let us understand the execution of fp way:
 
-Stage 1: ifElse(gt(x,y),fn(f,x,y), fn(s,x,y))
+Stage 1: ifElse(gt(x,y),f(x,y), s(x,y))
 
-Lets replace variables with actuals
+Stage 2: ifElse(gt(1,2), f(1,2), s(1,2));
 
-```ifElse(1>2, function() {return f(1,2);}, function(){ return s(1,2);})```
+Stage 3: ifElse(1>2, 1+2, 1-2);
 
-Stage 2:  Replace results value
+Stage 4: ifElse(false, 3, -1);
 
-```ifElse(false, function() {return 3;}, function(){ return -1;})```
+Stage 5: false ? 3 : -1;
 
-Stage 3: 
-```
-if(false)
-  function() {return 3;}
- else 
-  function() {return -1;}
-```
-  
-Stage 4: output is -1 since 1 is less than 2
+Stage 6: -1 is output
 
-
+It is as same as writing if else by ourself. But you can see lot of reusabilty of having function being called to perform some action than repeating the same for every need. It will be more readable if you start thinking from functional programming way. We will do more hands on this after understanding few supported new API in javascript.
 
 ### Principals of funtional programming:
 
