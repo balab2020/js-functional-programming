@@ -1,4 +1,3 @@
-# [In complete]
 # Functional Programming in JavaScript 
 
 ## Functional Programming
