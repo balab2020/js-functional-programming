@@ -2,9 +2,7 @@
 # Functional Programming in JavaScript 
 
 ## Functional Programming
-You can find a lot of articles, blogs & finally [wikipedia](https://en.wikipedia.org/wiki/Functional_programming) to understand about this. According to me, functional programming is programming pattern followed with certain practices. 
-
-It is a [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) paradigm. 
+Functional programming is a [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) paradigm. Everything is trated as function in mathematics way and it does exactly only one action at a time. You can read more about it in [wikipedia](https://en.wikipedia.org/wiki/Functional_programming). It is not new now. It was introduced along with Object Oriented Programming.
 
 > Collection of simple functional blocks to build application with immutation, purity.
 
@@ -12,9 +10,9 @@ Simple understanding from mathematics:
 
 ```f(x,y) = x + y``` is just a function to add two numbers. 
 
-- It does not change state (inputs)
-- It derives only output from inputs
-- It does only what is needed, no additional task
+- f(x,y) does not change state (inputs)
+- f(x,y) derives only output from inputs
+- f(x,y) does only one action
 
 Let's create another function which can add 3 numbers. 
 
@@ -28,6 +26,73 @@ How can I reuse to add 3 numbers?
 
 Example: 
 ```f1(1,2,3) => f(f(1,2),3) => f(3,3) => 6```
+
+Similarly we can think of creating basic mathematical operations as functions:
+
+Addition : ```f(x,y) = x + y;```
+
+Subtraction : ```s(x,y) = x - y;```
+
+Greater than: ```gt(x,y) = x > y;```
+
+Less Than: ```lt(x,y) = x < y;```
+
+Equal: ```eq(x,y) = x == y;```
+
+Not: ```not(x) = !x;```
+
+AND: ```and(x,y) = x && y;```
+
+ifElse: ```ifElse(cond,ifFn, elseFn) = cond ? ifFn() : elseFn();```
+
+function: ```fn(f,a,b) = function(a,b){
+  return f(a,b);
+};```
+
+..etc
+
+Instead of writing logical, we need to just these basic mathematical functions to get out put;
+
+For example, If you have two numbers x & y and need to sum them if x greater than y otherwise subtract y from x.
+
+How do you do:
+
+```
+const x = 1, y =2;
+if(x > y)
+  print(x+y);
+else
+  print(x-y);
+```
+
+In functional programming, you need to think of calling functions to do this.
+```
+const x=1, y=2;
+ifElse(gt(x,y),fn(f,x,y), fn(s,x,y));
+```
+Let us understand the execution of fp way:
+
+Stage 1: ifElse(gt(x,y),fn(f,x,y), fn(s,x,y))
+
+Lets replace variables with actuals
+
+```ifElse(1>2, function() {return f(1,2);}, function(){ return s(1,2);})```
+
+Stage 2:  Replace results value
+
+```ifElse(false, function() {return 3;}, function(){ return -1;})```
+
+Stage 3: 
+```
+if(false)
+  function() {return 3;}
+ else 
+  function() {return -1;}
+```
+  
+Stage 4: output is -1 since 1 is less than 2
+
+
 
 ### Principals of funtional programming:
 
